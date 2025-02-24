@@ -29,6 +29,7 @@ jobs:
         git config --global user.name github-actions[bot]
         git config --global core.longpaths true
         git clone https://github.com/zed-industries/zed -b main zed
+        git revert 2b7d372 --strategy-option theirs --no-edit
 
     - name: Build Executable
       run: |
